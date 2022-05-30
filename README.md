@@ -1,7 +1,3 @@
-# Heroku
-API via Heroku
-#
+# my-smart-status
 
-#This API will
-
-be use for web development
+webapp for idk nobody red this anyway
