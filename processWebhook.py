@@ -1,20 +1,24 @@
-import flask
-import os
-from flask import send_from_directory
+from dash import Dash, dcc, html
+from dash.dependencies import Input, Output, State
+import plotly.express as px
+import pandas as pd
+import numpy as np
+from datetime import datetime
+import dash_bootstrap_components as dbc
+from dash.exceptions import PreventUpdate
 
-app = flask.Flask(__name__)
 
-@app.route('/favicon.ico')
-def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'),
-                               'favicon.ico', mimetype='image/favicon.png')
 
-@app.route('/')
-@app.route('/home')
-def home():
-    return "Hello World"
+############################################################### FRONT END ###################################################################################################
 
-if __name__ == "__main__":
-    app.secret_key = 'ItIsASecret'
-    app.debug = True
-    app.run()
+
+
+
+app = Dash(__name__)
+server = app.server
+
+app.layout = html.Div("HW")
+
+
+if __name__ == '__main__':
+  app.run_server(debug = False)
